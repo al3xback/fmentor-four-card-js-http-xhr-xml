@@ -1,0 +1,111 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/functions' as func;
+
+.cards-summary,
+.cards,
+.cards__block,
+.card {
+	display: flex;
+	flex-direction: column;
+}
+
+.cards-summary {
+	text-align: center;
+}
+
+.cards-summary__title {
+	font-weight: var.$font-weight-200;
+}
+
+.cards-summary__subtitle {
+	margin-bottom: func.em(16, 24);
+	font-size: func.em(24, var.$font-size-primary);
+	color: var.$color-dark-blue;
+	line-height: 1.25;
+}
+
+.cards,
+.cards__block {
+	gap: func.em(24, var.$font-size-primary);
+}
+
+.card {
+	position: relative;
+	gap: func.em(10, var.$font-size-primary);
+	min-height: func.em(220, var.$font-size-primary);
+	padding: func.em(28, var.$font-size-primary);
+	background-color: var.$color-white;
+	border-radius: 8px;
+	box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+}
+
+.card::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: func.em(4, var.$font-size-primary);
+	background-color: transparent;
+}
+
+.card--supervisor::before {
+	background-color: var.$color-cyan;
+}
+
+.card--team-builder::before {
+	background-color: var.$color-red;
+}
+
+.card--karma::before {
+	background-color: var.$color-orange;
+}
+
+.card--calculator::before {
+	background-color: var.$color-blue;
+}
+
+.card__desc {
+	font-size: func.em(13, var.$font-size-primary);
+}
+
+.card__image {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: auto;
+}
+
+.card__image img {
+	width: func.em(56, var.$font-size-primary);
+	height: func.em(56, var.$font-size-primary);
+}
+
+@media (min-width: 57.5em) {
+	.cards-summary {
+		max-width: func.em(540, var.$font-size-primary);
+	}
+
+	.cards-summary__title,
+	.cards-summary__subtitle {
+		font-size: func.em(36, var.$font-size-primary);
+	}
+
+	.cards-summary__subtitle {
+		margin-bottom: func.em(16, 36);
+	}
+
+	.cards,
+	.cards__block {
+		gap: func.em(30, var.$font-size-primary);
+	}
+
+	.cards {
+		flex-direction: row;
+	}
+
+	.cards__block {
+		justify-content: center;
+		flex: 1;
+	}
+}

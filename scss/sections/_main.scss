@@ -1,0 +1,30 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/functions' as func;
+
+.section,
+.section__head,
+.section__body {
+	display: flex;
+	flex-direction: column;
+}
+
+.section {
+	gap: func.em(40, var.$font-size-primary);
+	width: 100%;
+	max-width: func.em(340, var.$font-size-primary);
+	margin: func.em(50, var.$font-size-primary) 0
+		func.em(80, var.$font-size-primary);
+}
+
+@media (min-width: 57.5em) {
+	.section {
+		gap: func.em(60, var.$font-size-primary);
+		max-width: func.em(1110, var.$font-size-primary);
+		margin: func.em(70, var.$font-size-primary) 0
+			func.em(100, var.$font-size-primary);
+	}
+
+	.section__head {
+		align-items: center;
+	}
+}

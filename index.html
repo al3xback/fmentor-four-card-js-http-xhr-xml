@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>
+			Frontend Mentor | Four Card Feature Section | JS HTTP - XHR - XML
+		</title>
+
+		<!-- Core Meta Data -->
+		<meta
+			name="description"
+			content="Frontend Mentor - Four card feature section solution." />
+		<meta
+			name="keywords"
+			content="Frontend Mentor, Four card feature section" />
+
+		<!-- Behavioral Meta Data -->
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<!-- Favicon -->
+		<link rel="icon" type="image/png" href="favicon.png" />
+
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap"
+			rel="stylesheet" />
+
+		<!-- Styles -->
+		<link rel="stylesheet" href="css/main.css" />
+
+		<!-- Scripts -->
+		<script src="js/main.js" defer type="module"></script>
+	</head>
+	<body>
+		<style>
+			.section-wrapper {
+				flex: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+
+			.loading,
+			.error {
+				flex: auto;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+		</style>
+
+		<template id="section-head-template">
+			<div class="section__head">
+				<div class="cards-summary">
+					<h2 class="cards-summary__title"></h2>
+					<p class="cards-summary__subtitle">
+						<strong></strong>
+					</p>
+					<p class="cards-summary__desc"></p>
+				</div>
+			</div>
+		</template>
+
+		<template id="card-template">
+			<div class="card">
+				<h3 class="card__title"></h3>
+				<p class="card__desc"></p>
+				<div class="card__image">
+					<img width="64" height="64" />
+				</div>
+			</div>
+		</template>
+
+		<template id="section-body-template">
+			<div class="section__body">
+				<div class="cards">
+					<div class="cards__block"></div>
+					<div class="cards__block"></div>
+					<div class="cards__block"></div>
+				</div>
+			</div>
+		</template>
+
+		<template id="section-template">
+			<section class="section"></section>
+		</template>
+
+		<header>
+			<h1 class="sr-only">Four card feature section</h1>
+		</header>
+
+		<main>
+			<div class="container">
+				<div class="section-wrapper">
+					<p class="loading">Fetching section data...</p>
+				</div>
+			</div>
+		</main>
+
+		<footer>
+			<div class="container">
+				<p>
+					Challenge by
+					<a
+						href="https://www.frontendmentor.io?ref=challenge"
+						class="btn btn--link"
+						rel="noopener"
+						target="_blank"
+						>Frontend Mentor</a
+					>. Coded by
+					<a
+						href="https://github.com/al3xback"
+						class="btn btn--link"
+						rel="noopener"
+						target="_blank"
+						>al3xback</a
+					>.
+				</p>
+			</div>
+		</footer>
+	</body>
+</html>
