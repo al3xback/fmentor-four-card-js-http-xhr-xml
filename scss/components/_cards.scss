@@ -13,15 +13,16 @@
 	text-align: center;
 }
 
-.cards-summary__title {
+.cards-summary__subtitle {
+	margin-bottom: func.em(6, 24);
+	font-size: func.em(24, var.$font-size-primary);
 	font-weight: var.$font-weight-200;
+	color: var.$color-dark-blue;
+	line-height: 1;
 }
 
-.cards-summary__subtitle {
+.cards-summary__title {
 	margin-bottom: func.em(16, 24);
-	font-size: func.em(24, var.$font-size-primary);
-	color: var.$color-dark-blue;
-	line-height: 1.25;
 }
 
 .cards,
@@ -92,7 +93,7 @@
 	}
 
 	.cards-summary__subtitle {
-		margin-bottom: func.em(16, 36);
+		margin-bottom: func.em(10, 36);
 	}
 
 	.cards,
